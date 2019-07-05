@@ -49,7 +49,7 @@ async def _(event):
     packname = f"@loxxi Pack"
     packshortname = f"loxxi_packs"  # format: Uni_Borg_userid
 
-    await event.edit("Stealing this sticker. Please Wait!")
+    await event.edit("Grabbing Sketch Brush & Painting this Picture...!")
 
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
@@ -110,7 +110,8 @@ async def _(event):
                 await silently_send_message(bot_conv, sticker_emoji)
                 await silently_send_message(bot_conv, "/done")
 
-    await event.edit(f"▕╮╭┻┻╮╭┻┻╮╭▕╮╲\n▕╯┃╭╮┃┃╭╮┃╰▕╯╭▏\n▕╭┻┻┻┛┗┻┻┛   ▕  ╰▏\n▕╰━━━┓┈┈┈╭╮▕╭╮▏\n▕╭╮╰┳┳┳┳╯╰╯▕╰╯▏\n▕╰╯┈┗┛┗┛┈╭╮▕╮┈▏\n\n[sticker looted!\n\n This Sticker is now stored to your database...](t.me/addstickers/{packshortname})")
+    await event.edit(f"▕╮╭┻┻╮╭┻┻╮╭▕╮╲\n▕╯┃╭╮┃┃╭╮┃╰▕╯╭▏\n▕╭┻┻┻┛┗┻┻┛   ▕  ╰▏\n▕╰━━━┓┈┈┈╭╮▕╭╮▏\n▕╭╮╰┳┳┳┳╯╰╯▕╰╯▏\n▕╰╯┈┗┛┗┛┈╭╮▕╮┈▏[[For
+Painting Done! Find Your Masterpiece [Here](t.me/addstickers/{packshortname})")
 
 
 @borg.on(admin_cmd("packinfo"))
