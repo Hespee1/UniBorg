@@ -49,7 +49,7 @@ async def _(event):
     packname = f"@loxxi Pack"
     packshortname = f"loxxi_packs"  # format: Uni_Borg_userid
 
-    await event.edit("Grabbing Sketch Brush & Painting this Picture..")
+    await event.edit("Stealing this sticker. Please Wait!")
 
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
@@ -58,7 +58,7 @@ async def _(event):
         with BytesIO(file) as mem_file, BytesIO() as sticker:
             resize_image(mem_file, sticker)
             sticker.seek(0)
-            uploaded_sticker = await borg.upload_file(sticker, file_name="@UniBorg_Sticker.png")
+            uploaded_sticker = await borg.upload_file(sticker, file_name="@loxxi_Sticker.png")
             if not await stickerset_exists(bot_conv, packshortname):
                 await silently_send_message(bot_conv, "/cancel")
                 response = await silently_send_message(bot_conv, "/newpack")
@@ -110,7 +110,7 @@ async def _(event):
                 await silently_send_message(bot_conv, sticker_emoji)
                 await silently_send_message(bot_conv, "/done")
 
-    await event.edit(f"\n▕╭╮╰┳╮╭┻┻╮╭┻┻╮╭▕╮╲\n▕╯┃╭╮┃┃╭╮┃╰▕╯╭▏\n▕╭┻┻┻┛┗┻┻┛   ▕  ╰▏\n▕╰━━━┓┈┈┈╭╮▕╭╮▏┳┳┳╯╰╯▕╰╯▏\n▕╰╯┈┗┛┗┛┈╭╮▕╮┈Painting Done! Find Your Masterpiece [Here](t.me/addstickers/{packshortname})")
+    await event.edit(f"▕╮╭┻┻╮╭┻┻╮╭▕╮╲\n▕╯┃╭╮┃┃╭╮┃╰▕╯╭▏\n▕╭┻┻┻┛┗┻┻┛   ▕  ╰▏\n▕╰━━━┓┈┈┈╭╮▕╭╮▏\n▕╭╮╰┳┳┳┳╯╰╯▕╰╯▏\n▕╰╯┈┗┛┗┛┈╭╮▕╮┈▏\n\n[sticker looted!\n\n This Sticker is now stored to your database...](t.me/addstickers/{packshortname})")
 
 
 @borg.on(admin_cmd("packinfo"))
