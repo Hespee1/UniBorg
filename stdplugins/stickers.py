@@ -49,7 +49,7 @@ async def _(event):
     packname = f"@loxxi Pack"
     packshortname = f"loxxi_packs"  # format: Uni_Borg_userid
 
-    await event.edit("Grabbing Sketch Brush & Painting this Picture..!")
+    await event.edit("Grabbing Sketch Brush & Painting this Picture..")
 
     async with borg.conversation("@Stickers") as bot_conv:
         now = datetime.datetime.now()
