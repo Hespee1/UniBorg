@@ -60,21 +60,21 @@ class Config(object):
     # providing usernames means an additional overhead for the user
     CHATS_TO_MONITOR_FOR_ANTI_FLOOD = []
     # specify LOAD and NO_LOAD
-    LOAD = []
-    # foloowing plugins won't work on Heroku,
-    # because of their ephemeral file system
-    NO_LOAD = ["fwd",
+    LOAD = ["fwd",
         "telegraph",
         "afk",
         "gban"
-              
     ]
+    # foloowing plugins won't work on Heroku,
+    # because of their ephemeral file system
+    NO_LOAD = []
     # Get your own API key from https://www.remove.bg/ or
     # feel free to use http://telegram.dog/Remove_BGBot
     REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
     # Set to True if you want to block users that are spamming your PMs.
     NO_P_M_SPAM = bool(os.environ.get("NO_P_M_SPAM", False))
     # define "spam" in PMs
+    SLAP_USERNAME = os.environ.get("SLAP_USERNAME", None)
     GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
     GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
     MAX_FLOOD_IN_P_M_s = int(os.environ.get("MAX_FLOOD_IN_P_M_s", 3))
