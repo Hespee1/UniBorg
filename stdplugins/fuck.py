@@ -90,18 +90,8 @@ async def _(event):
             await event.edit(animation_chars[i % 4])
 
 
+""
 
-"""Emoji
-
-Available Commands:
-
-.emoji shrug
-
-.emoji apple
-
-.emoji :/
-
-.emoji -_-"""
 
 from telethon import events
 
