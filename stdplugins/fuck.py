@@ -1,14 +1,12 @@
-"""Emoji
+"""
 
 Available Commands:
 
-.emoji shrug
+.sux
 
-.emoji apple
+.fuk
 
-.emoji :/
-
-.emoji -_-"""
+.kiss"""
 
 from telethon import events
 
@@ -32,7 +30,7 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "fu":
+    if input_str == "fuk":
 
         await event.edit(input_str)
 
@@ -127,7 +125,7 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "kess":
+    if input_str == "kiss":
 
         await event.edit(input_str)
 
