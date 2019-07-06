@@ -13,8 +13,7 @@ async def _(event):
     else:
         s_help_string = ""
         
-    help_string = """@UniBorg (**Custom Built By** @loxxi)
-    
+    help_string = """@UniBorg (**Custom Built By** @loxxi)    
 **Verified Account**: ✅
 **Official Website**: https://webloaded.com.ng
 
