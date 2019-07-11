@@ -16,6 +16,7 @@ async def _(event):
 Python {}
 Telethon {}
 UserBot Forked from https://github.com/somto811/uniborg""".format(
+        
         sys.version,
         __version__
     )
