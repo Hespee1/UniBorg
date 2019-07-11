@@ -13,9 +13,9 @@ async def _(event):
     else:
         s_help_string = "****:"
     help_string = """@UniBorg ( **Custom Built By** @loxxi ) \n**Verified Account**: ✅\n**Official Website**: https://webloaded.com.ng\n
-Pithun {}
-Talethrun {}
-**UserBot Forked from**: https://github.com/somto811/UniBorg""".format(
+Python {}
+Telethon {}
+**UserBot Forked from**: https://github.com/somto811/UniBorg.format(
         sys.version,
         __version__
     )
