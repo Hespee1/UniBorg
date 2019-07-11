@@ -11,11 +11,11 @@ async def _(event):
     if splugin_name in borg._plugins:
         s_help_string = borg._plugins[splugin_name].__doc__
     else:
-        s_help_string = "****:"
-    help_string = """@UniBorg ( **Custom Built By** @loxxi ) \n**Verified Account**: ✅\n**Official Website**: https://webloaded.com.ng\n
+        s_help_string = ""
+    help_string = """@UniBorg(**Custom Built By** @loxxi) \n**Verified Account**: ✅\n**Official Website**: https://webloaded.com.ng\n
 Python {}
 Telethon {}
-**UserBot Forked from**: https://github.com/somto811/UniBorg.format(
+UserBot Forked from https://github.com/somto811/uniborg""".format(
         sys.version,
         __version__
     )
@@ -51,4 +51,4 @@ async def _(event):
     result = await borg(functions.help.GetConfigRequest())  # pylint:disable=E0602
     result = result.stringify()
     logger.info(result)  # pylint:disable=E0602
-    await event.edit("""Telethon UserBot powered by UniBorg""")
+    await event.edit("""Telethon UserBot powered by @UniBorg""")
