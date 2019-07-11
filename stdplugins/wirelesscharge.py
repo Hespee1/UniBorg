@@ -24,11 +24,11 @@ import importlib.util
 
 
 
-@borg.on(events.NewMessage(outgoing=True, pattern='^\.(f?f)charge'))
+@borg.on(events.NewMessage(outgoing=True, pattern='^\.(f?f)wire'))
 
 async def timer_blankx(e):
 
- txt=e.text[7:] + '\n\n`Tesla Wireless Charging (beta) Started...\nDevice Detected: infinix Hot7 pro\nBattery Percentage:` '
+ txt=e.text[7:] + '\n\n`cee jay Wireless Charging (beta) Started...\nDevice Detected: Nokia 1100\nBattery Percentage:` '
 
  j=10
 
@@ -44,5 +44,5 @@ async def timer_blankx(e):
 
  if e.pattern_match.group(1) == 'f':
 
-  await e.edit("`Tesla Wireless Charging (beta) Completed...\nDevice Detected: infinix Hot7 pro (Space Grey Varient)\nBattery Percentage:` [100%](https://telegra.ph/file/a45aa7450c8eefed599d9.mp4) ", link_preview=True)
+  await e.edit("`cee jay Wireless Charging (beta) Completed...\nDevice Detected: Nokia 1100 (Space Grey Varient)\nBattery Percentage:` [100%](https://telegra.ph//file/b4be212c8e9a917fb96ad.mp4) ", link_preview=True)
 
