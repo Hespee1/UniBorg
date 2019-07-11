@@ -15,8 +15,8 @@ async def _(event):
     help_string = """@UniBorg ( **Custom Built By** @loxxi ) \n**Verified Account**: ✅\n**Official Website**: https://webloaded.com.ng\n
 Python {}
 Telethon {}
+
 UserBot Forked from https://github.com/somto811/uniborg""".format(
-        
         sys.version,
         __version__
     )
