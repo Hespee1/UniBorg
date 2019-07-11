@@ -70,7 +70,7 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             buttons = paginate_help(0, borg._plugins, "helpme")
             result = builder.article(
                 "© @UniBorg",
-                text="{}\nℂ𝕦𝕣𝕣𝕖𝕟𝕥𝕝𝕪 𝕃𝕠𝕒𝕕𝕖𝕕 ℙ𝕝𝕦𝕘𝕚𝕟𝕤: {}".format(
+                text="{}\nCurrently Loaded Plugins: {}".format(
                     query, len(borg._plugins)),
                 buttons=buttons,
                 link_preview=False
@@ -190,18 +190,14 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         else:
             result = builder.article(
                 "© @UniBorg",
-                text="""@UniBorg **( Custom Built By** @loxxi **)** 
-**Verified Account:** ✅
-**Official Website:** https://webloaded.com.ng
-**python 3.7.3 (default, Apr  3 2019, 21:35:17)** 
-**[GCC 7.3.0]**
-**Telethon 1.9.0**
-**Custom Built Fork:** https://github.com/somto811/UniBorg""",
+                text="""Try @UniBorg
+You can log-in as Bot or User and do many cool things with your Telegram account.
+All instaructions to run @UniBorg in your PC has been explained in https://github.com/SpEcHiDe/UniBorg""",
                 buttons=[
-                    [custom.Button.url("👤Contact Creator👤", "https://telegram.dog/loxxi"), custom.Button.url(
-                        "🐶Resistance Dog🐶", "https://t.me/addstickers/loxxi_packs")],
+                    [custom.Button.url("Join the Channel", "https://telegram.dog/UniBorg"), custom.Button.url(
+                        "Join the Group", "tg://some_unsupported_feature")],
                     [custom.Button.url(
-                        "👨‍💻Source Code👨‍💻", "https://github.com/somto811/UniBorg")]
+                        "Source Code", "tg://some_unsupported_feature")]
                 ],
                 link_preview=False
             )
@@ -220,8 +216,9 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
             # https://t.me/TelethonChat/115200
             await event.edit(buttons=buttons)
         else:
-            reply_pop_up_alert = "⚠️ Warning: Don't Press Any Buttons ⚠️\n\nCustom Fork: https://github.com/somto811/UniBorg"
+            reply_pop_up_alert = "Please get your own @UniBorg, and don't edit my messages!"
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
+
 
     @tgbot.on(events.callbackquery.CallbackQuery(  # pylint:disable=E0602
         data=re.compile(b"helpme_prev\((.+?)\)")
@@ -258,14 +255,14 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
 
 def paginate_help(page_number, loaded_plugins, prefix):
     number_of_rows = Config.NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD
-    number_of_cols = 7
+    number_of_cols = 2
     helpable_plugins = []
     for p in loaded_plugins:
         if not p.startswith("_"):
             helpable_plugins.append(p)
     helpable_plugins = sorted(helpable_plugins)
     modules = [custom.Button.inline(
-        "{} {}".format("👨‍💻", x),
+        "{} {}".format("✅", x),
         data="ub_plugin_{}".format(x))
         for x in helpable_plugins]
     pairs = list(zip(modules[::number_of_cols], modules[1::number_of_cols]))
@@ -276,7 +273,7 @@ def paginate_help(page_number, loaded_plugins, prefix):
     if len(pairs) > number_of_rows:
         pairs = pairs[modulo_page * number_of_rows:number_of_rows * (modulo_page + 1)] + \
             [
-            (custom.Button.inline("⏪", data="{}_prev({})".format(prefix, modulo_page)),
-             custom.Button.inline("⏩", data="{}_next({})".format(prefix, modulo_page)))
+            (custom.Button.inline("Previous", data="{}_prev({})".format(prefix, modulo_page)),
+             custom.Button.inline("Next", data="{}_next({})".format(prefix, modulo_page)))
         ]
     return pairs
