@@ -138,8 +138,7 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"I'll reply soon. I need some time alone (This is an automated message, so everyone who sends me a message will see this, not just you)
-{afk_since} " + \
+        message_to_reply = f"I'll reply soon. I need some time alone (This is an automated message, so everyone who sends me a message will see this, not just you) {afk_since} " + \
             f"I promise I'll back in a few hours\n__Reason:__ {reason}" \
             if reason \
             else f"I'm afk since {afk_since} and I will be back soon."
