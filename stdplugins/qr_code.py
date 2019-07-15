@@ -1,5 +1,3 @@
-
-  
 """Quick Response Codes
 Available Commands
 .getqr
