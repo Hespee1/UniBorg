@@ -26,3 +26,4 @@ oauth2client
 httplib2
 lxml
 PyGithub
+qrcode
