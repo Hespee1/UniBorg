@@ -139,9 +139,13 @@ async def on_afk(event):
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
         message_to_reply = f"I'm afk since {afk_since} " + \
-            f"and I will be back soon\n__Reason:__ {reason}" \
+            f"I'll reply soon. I need some time alone (This is an automated message, so everyone who sends me a message will see this, not just you)
+
+I promise I'll back in a few hours\n__Reason:__ {reason}" \
             if reason \
-            else f"I'm afk since {afk_since} and I will be back soon."
+            else f"I'm afk since {afk_since} I'll reply soon. I need some time alone (This is an automated message, so everyone who sends me a message will see this, not just you)
+
+I promise I'll back in a few hours."
         msg = await event.reply(message_to_reply)
         if event.chat_id in borg.storage.last_afk_message:  # pylint:disable=E0602
             await borg.storage.last_afk_message[event.chat_id].delete()  # pylint:disable=E0602
