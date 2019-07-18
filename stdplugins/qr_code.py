@@ -112,3 +112,4 @@ async def _(event):
     await event.edit("Created QRCode in {} seconds".format(ms))
     await asyncio.sleep(5)
     await event.delete()
+ 
