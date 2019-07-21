@@ -18,8 +18,7 @@ async def _(event):
         """user_added=True,
         user_joined=True,
         user_left=False,
-        user_kicked=False,
-        link_preview=False, """
+        user_kicked=False,"""
         if event.user_joined:
             if cws.should_clean_welcome:
                 try:
