@@ -60,11 +60,7 @@ class Config(object):
     # providing usernames means an additional overhead for the user
     CHATS_TO_MONITOR_FOR_ANTI_FLOOD = []
     # specify LOAD and NO_LOAD
-    LOAD = ["fwd",
-        "telegraph",
-        "afk",
-        "gban"
-           ]
+    LOAD = []
     # foloowing plugins won't work on Heroku,
     # because of their ephemeral file system
     NO_LOAD = []
