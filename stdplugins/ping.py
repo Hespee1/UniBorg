@@ -12,4 +12,3 @@ async def _(event):
     end = datetime.now()
     ms = (end - start).microseconds/1000
     await event.edit("Ping is High AF 😭\n{}".format(ms))
-© 2019 GitHub, Inc.
