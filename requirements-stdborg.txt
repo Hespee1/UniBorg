@@ -6,7 +6,7 @@ cryptg
 emoji
 googletrans
 google_images_download
-gsearch
+gsearch>=1.6.0
 gtts
 hachoir
 Pillow
@@ -27,3 +27,9 @@ httplib2
 lxml
 PyGithub
 qrcode
+pytz
+selenium
+webdriver-manager
+cowpy
+cowsay
+pyfiglet
