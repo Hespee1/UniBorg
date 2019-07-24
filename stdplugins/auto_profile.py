@@ -2,7 +2,7 @@
 # (c) Shrimadhav U K
 """Auto Profile Updation Commands
 .autoname
-.autobio"""
+.autopbio"""
 import asyncio
 import time
 from telethon.tl import functions
