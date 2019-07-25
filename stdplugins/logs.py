@@ -1,1 +1,0 @@
-2019-07-25T00:32:12.049705+00:00 app[worker.1]: File "stdplugins/kangani.py", line 44, in _2019-07-25T00:32:12.049707+00:00 app[worker.1]: if not is_message_image(reply_message):2019-07-25T00:32:12.049709+00:00 app[worker.1]: NameError: name 'is_message_image' is not defined
