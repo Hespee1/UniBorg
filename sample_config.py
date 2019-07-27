@@ -94,11 +94,19 @@ class Config(object):
     # VeryStream only supports video formats
     VERY_STREAM_LOGIN = os.environ.get("VERY_STREAM_LOGIN", None)
     VERY_STREAM_KEY = os.environ.get("VERY_STREAM_KEY", None)
-    # Google Drive ()
+    TEMP_DIR = os.environ.get("TEMP_DIR", None)
+    CHANNEL_ID = int(os.environ.get("CHANNEL_ID", None))
+    #Google Chrome Stuff
+    CHROME_DRIVER = os.environ.get("CHROME_DRIVER", None)
+    GOOGLE_CHROME_BIN = os.environ.get("GOOGLE_CHROME_BIN", None)
     G_DRIVE_CLIENT_ID = os.environ.get("G_DRIVE_CLIENT_ID", None)
     G_DRIVE_CLIENT_SECRET = os.environ.get("G_DRIVE_CLIENT_SECRET", None)
     GDRIVE_FOLDER_ID = os.environ.get("GDRIVE_FOLDER_ID", None)
-    G_DRIVE_AUTH_TOKEN_DATA = os.environ.get("G_DRIVE_AUTH_TOKEN_DATA", None)
+    AUTH_TOKEN_DATA = os.environ.get("AUTH_TOKEN_DATA", None)
+    os.makedirs(TMP_DOWNLOAD_DIRECTORY)
+    t_file = open(TMP_DOWNLOAD_DIRECTORY+"auth_token.txt","w")
+    t_file.write(AUTH_TOKEN_DATA)
+    t_file.close()
     #
     TELE_GRAM_2FA_CODE = os.environ.get("TELE_GRAM_2FA_CODE", None)
     #
