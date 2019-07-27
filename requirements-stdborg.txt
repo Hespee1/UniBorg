@@ -36,3 +36,5 @@ cowsay
 pyfiglet
 git+https://github.com/LonamiWebs/Telethon
 humanize
+telethon
+selenium
