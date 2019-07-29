@@ -25,6 +25,14 @@
       "description": "Get this value from my.telegram.org! Please do not steal",
       "value": ""
     },
+    "GOOGLE_CHROME_BIN":{
+      "description": "CHROME Binary PATH",
+      "value":"/app/.apt/usr/bin/google-chrome"
+    },
+    "CHROME_DRIVER":{
+      "description": "CHROME Binary PATH",
+      "value":"/app/.chromedriver/bin/chromedriver"
+    },
     "HU_STRING_SESSION": {
       "description": "Get this value by running python3 GenerateStringSession.py locally",
       "value": ""
@@ -164,9 +172,15 @@
   }],
   "buildpacks": [{
     "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
-  }, {
+  },{
+    "url":"https://github.com/heroku/heroku-buildpack-google-chrome"
+  },{
+    "url":"https://github.com/heroku/heroku-buildpack-chromedriver"
+  },{
+    "url":"https://github.com/amivin/aria2-heroku.git"
+  },{
     "url": "https://github.com/opendoor-labs/heroku-buildpack-p7zip"
-  }, {
+  },{
     "url": "heroku/python"
   }]
 }
