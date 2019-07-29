@@ -38,3 +38,4 @@ git+https://github.com/LonamiWebs/Telethon
 humanize
 telethon
 selenium
+aria2p
