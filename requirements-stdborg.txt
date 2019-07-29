@@ -25,17 +25,12 @@ git+https://github.com/ahupp/python-magic
 google-api-python-client
 oauth2client
 httplib2
-lxml
 PyGithub
 qrcode
 pytz
-selenium
 webdriver-manager
 cowpy
 cowsay
 pyfiglet
 git+https://github.com/LonamiWebs/Telethon
 humanize
-telethon
-selenium
-aria2p
