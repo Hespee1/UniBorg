@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 # (c) Shrimadhav U K
@@ -190,14 +191,16 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
         else:
             result = builder.article(
                 "© @UniBorg",
-                text="""Try @UniBorg
+                text="""Hi there. I will introduce you to UniBorg
 You can log-in as Bot or User and do many cool things with your Telegram account.
-All instaructions to run @UniBorg in your PC has been explained in https://github.com/SpEcHiDe/UniBorg""",
+All instructions to run @UniBorg in your device has been explained in https://github.com/Somto811/UniBorg""",
                 buttons=[
-                    [custom.Button.url("Join the Channel", "https://telegram.dog/UniBorg"), custom.Button.url(
-                        "Join the Group", "tg://some_unsupported_feature")],
+                    [custom.Button.url("Contact the Creator", "https://telegram.dog/loxxi"), custom.Button.url(
+                        "Tutorial", "https://telegra.ph/Tutorial-07-26")],
                     [custom.Button.url(
-                        "Source Code", "tg://some_unsupported_feature")]
+                        "Source Code", "https://github.com/Somto811/UniBorg")],
+                    [custom.Button.url(
+                        "Deploy to Heroku", "https://da.gd/Usp8K"), custom.Button.url("Fork Boost", "https://telegra.ph/Fork-Boost-07-28"), custom.Button.url("Premium Dyno Cheat", "https://telegra.ph/Premium-Dyno-Cheat-07-28")]
                 ],
                 link_preview=False
             )
@@ -250,8 +253,7 @@ All instaructions to run @UniBorg in your PC has been explained in https://githu
             "No DOCSTRING has been setup for {} plugin".format(plugin_name)
         reply_pop_up_alert += "\n\n Use .unload {} to remove this plugin\n\
             © @UniBorg".format(plugin_name)
-        await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
-
+        await event.answer(reply_pop_up_alert, cache_time=0, alert=True
 
 def paginate_help(page_number, loaded_plugins, prefix):
     number_of_rows = Config.NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD
