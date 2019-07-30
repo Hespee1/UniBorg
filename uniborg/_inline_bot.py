@@ -255,6 +255,7 @@ All instructions to run @UniBorg in your device has been explained in https://gi
             © @UniBorg".format(plugin_name)
         await event.answer(reply_pop_up_alert, cache_time=0, alert=True
 
+
 def paginate_help(page_number, loaded_plugins, prefix):
     number_of_rows = Config.NO_OF_BUTTONS_DISPLAYED_IN_H_ME_CMD
     number_of_cols = 2
