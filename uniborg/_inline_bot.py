@@ -199,7 +199,7 @@ if Config.TG_BOT_USER_NAME_BF_HER is not None and tgbot is not None:
 **Custom Built Fork:** https://github.com/Somto811/UniBorg""",
                 buttons=[
                     [custom.Button.url("👤Contact Creator👤", "https://telegram.dog/loxxi"), custom.Button.url(
-                        "📼loxxi Audio Memes📼", "https://t.me/tgaudiomemes")],
+                        "📼loxxi Audio Memes📼", "https://https://t.me/joinchat/HhITekqsnOULZpwe7ZKRTA")],
                     [custom.Button.url("👨‍💻Source Code👨‍💻", "https://github.com/Somto811/UniBorg"), custom.Button.url(
                         "❕❗Deploy Me❗❕", "https://da.gd/Emcf")],
                     [custom.Button.url("🔰Update Fork🔰", "tg://need_update_for_some_feature"), custom.Button.url(
