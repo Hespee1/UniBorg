@@ -33,6 +33,9 @@ async def set_not_afk(event):
 async def _(event):
     if event.fwd_from:
         return
+    if Config.PRIVATE_GROUP_BOT_API_ID is None:
+        await event.edit("Please set the required environment variable `PRIVATE_GROUP_BOT_API_ID` for this plugin to work")
+        return
     reason = event.pattern_match.group(1)
     if not borg.storage.USER_AFK:  # pylint:disable=E0602
         last_seen_status = await borg(  # pylint:disable=E0602
@@ -100,10 +103,14 @@ async def on_afk(event):
             else:
                 afk_since = f"`{int(seconds)}s` **ago**"
         msg = None
-        message_to_reply = f"My Boss is Away From Keyboard . \nHe Will Check Your Messeges and Try to Reply.\nKindly Don't Spam . Thank You .\n\n**Last Seen: Only God Knows.** " + \
-            f"\n\n__Reason:__ {reason}" \
+        message_to_reply = f"`hi there... .` " + \
+            f"`this user is afk`.\n__Sebebi:__ {reason}" \
             if reason \
-            else f"/kickme\n\n**Important Notice**\n\n[This User Is Ded Forever...](https://telegra.ph//file/a53fa950ff31781d5930a.jpg) "
+            else f"I'm currently away from keyboard since {afk_since}. Meanwhile, don't spam me. "
+        #message_to_reply = f"`I'm currently away from keyboard since` {afk_since} " + \
+            #f"`And I will be right back soon`.\n__Reason:__ {reason}" \
+            #if reason \
+            #else f"I'm currently away from keyboard since {afk_since}. Meanwhile, don't spam me. "        
         msg = await event.reply(message_to_reply)
         await asyncio.sleep(5)
         if event.chat_id in borg.storage.last_afk_message:  # pylint:disable=E0602
